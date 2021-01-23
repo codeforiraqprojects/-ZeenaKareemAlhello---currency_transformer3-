@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+      <title>currency_transfer</title>
+      <style>
+              .head1 {
+                font-size:100px;
+                color:#fffff;
+                font-weight:bold;
+                text-align:center;
+                top:0;
+                background-color:gray;
+
+
+              }
+               .menu a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            background-color:gray;
+        }
+
+              footer {
+            width: 100%;
+            bottom: 0px;
+            background-color: #000;
+            color: #fff;
+            position: absolute;
+            padding-top:20px;
+            padding-bottom:0px;
+            text-align:center;
+            font-size:30px;
+            font-weight:bold;
+        }
+                ul {
+  position: absolute;
+  top:50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden*/
+  background:gray;
+  width: 100%;
+}
+li {
+  float: left;
+  font-family: TW Cen MT Regular;
+  font-size:30px;
+  height: 70px;
+
+}
+li a, .dropbtn {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+li a:hover, .dropdownmenu:hover .dropbtn {
+  background:gray;
+}
+li.dropdownmenu {
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: red;
+  width:15%;
+}
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  color: #00fff6;
+}
+.dropdownmenu:hover .dropdown-content {
+  display:block;
+          </style>
+<h4>{{a}}</h4>
+   </head>
+
+  <div class="head1">.</div>
+  <div class="menu">
+
+      <ul>
+          <div class="nav-item active">
+            <a class="nav-link" href="{% url 'login'%}">LOGIN</a>
+        </div>
+
+          <li id="a" class="dropdownmenu">
+               <a href="javascript:void(0)" class="dropbtn">CHOOSE TRANSLATION</a>
+          <div class="dropdown-content">
+               <a href="{% url 'currency'%}">CURRENCY TRANSLATION</a>
+               <a href="{% url 'measure'%}">MEASURE TRANSLATION</a>
+               <a href="{% url 'weight'%}">WEIGHT TRANSLATION</a>
+          </div>
+         </li>
+      </ul>
+
+    </div>
+
+
+  <!-- choose the type of translate-->
+
+<!--
+<ul>
+    <li id="Completed" class="dropdownmenu">
+     <a href="javascript:void(0)" class="dropbtn">COMPLETED</a>
+      <div class="dropdown-content">
+        <a href="The Crispy.html">"The Crispy"</a>
+        <a href="New Project.html">New Project</a>
+      </div>
+    </li>
+</ul>
+-->
+
+<!--
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#11" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Dropdown
+           </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#22">Action</a>
+                  <a class="dropdown-item" href="#33">Another action</a>
+          <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#44">Something else here</a>
+           </div>
+        </li>
+   </nav>
+
+
+
+  <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+</div>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+-->
+
+<body>
+
+<!--
+
+<div class="btn-group">
+    <button type="button" class="btn btn-secondary">Reference</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+</div> -->
+{% block content %}
+
+{% endblock %}
+
+<footer>Footer</footer>
+
+
+</body>
+</html>

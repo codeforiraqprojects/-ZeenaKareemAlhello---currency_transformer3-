@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <title></title>
+</head>
+
+
+<body>
+{% block content %}
+
+<form action="" method="POST"><!--action="PageObjects"-->
+    {% csrf_token %}
+    {{ form.as_p}}
+<center>
+  <!--  <div class="row-4">
+  <div class="col-lg">1 of 2</div>
+  <div class="col-lg">2 of 2</div>
+  <div class="col-lg">1 of 2</div>
+  <div class="col-lg">2 of 2</div>  -->
+
+    <!--<div id="third">enter the money</div>-->
+    <!--
+    <div class="form-group">
+        <label>Enter Money</label>
+              <div class="row-6">
+               <div id="1">   <h2><input type="number" name="num" step="any"></h2>
+              </div>
+
+              </div>-->
+    <!-- {{form}}
+
+   -->
+
+   <!-- <select name="drop1" >
+    <option selected="selected" disabled>choose currency</option>
+    <option value="USD">[USD]دولار امريكي</option>
+    <option value="IQD">[IQD]دينار عراقي</option>
+    <option value="EUR">[EUR]يورو</option>
+    <option value="MAD">[MAD]الدرهم المغربي</option>
+
+ </select>
+
+    <select  name="drop2">
+    <option selected="selected" disabled>choose currency</option>
+    <option value="USD">[USD]دولار امريكي</option>
+    <option value="IQD">[IQD]دينار عراقي</option>
+    <option value="EUR">[EUR]يورو</option>
+    <option value="MAD">[MAD]الدرهم المغربي</option>
+
+  </select>
+
+
+    <button type="submit">translate</button>
+-->
+
+</div>
+    <table class="table table-dark ">
+    <thead>
+      <tr>
+        <th>ENTER MONEY</th>
+        <th>FROM</th>
+        <th>TO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="number" name="num" step="any"></td>
+        <td> <select name="drop1" class="custom-select-lg">
+    <option selected="selected" disabled>CHOOSE CURRENCY</option>
+    <option value="USD">[USD]دولار امريكي</option>
+    <option value="IQD">[IQD]دينار عراقي</option>
+    <option value="EUR">[EUR]يورو</option>
+    <option value="MAD">[MAD]الدرهم المغربي</option>
+
+ </select>
+        </td>
+        <td><select  name="drop2" class="custom-select-lg">
+    <option selected="selected" disabled>CHOOSE CURRENCY</option>
+    <option value="USD">[USD]دولار امريكي</option>
+    <option value="IQD">[IQD]دينار عراقي</option>
+    <option value="EUR">[EUR]يورو</option>
+    <option value="MAD">[MAD]الدرهم المغربي</option>
+
+  </select></td>
+      </tr>
+    <tr>
+        <td> </td>
+        <td><button type="submit" class="btn btn-warning" >TRANSLATE</button></td>
+    </tr>
+    </tbody>
+    </table>
+
+    <h4> <span class="label label-default">{{number}}</span></h4>
+    <h1> <span class="label label-default">{{result}}</span></h1>
+    <h1> <span class="label label-default">{{v2}}</span></h1>
+    <h1> <span class="label label-default"></span></h1>
+    <h1> <span class="label label-default"></span></h1>
+
+    </center>
+</form>
+
+
+{% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <title>Title</title>
+
+
+</head>
+<body>
+
+{% block content %}
+
+<form action="" method="POST"><!--action="PageObjects"-->
+    {% csrf_token %}
+    {{ form.as_p}}
+<center>
+    </div>
+    <table class="table table-dark ">
+    <thead>
+      <tr>
+        <th>ENTER NUMBER</th>
+        <th>FROM</th>
+        <th>TO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="number" name="num" step="any"></td>
+        <td> <select name="drop3" class="custom-select-lg">
+    <option selected="selected" disabled>CHOOSE MEASURE</option>
+    <option value="KM">كيلو متر</option>
+    <option value="M"> متر</option>
+    <option value="CM">سنتيمتر</option>
+    <option value="MM">مللى متر</option>
+    <option value="MI">ميل</option>
+    <option value="FT">قدم</option>
+ </select>
+        </td>
+        <td><select  name="drop4" class="custom-select-lg">
+    <option selected="selected" disabled>CHOOSE MEASURE</option>
+      <option value="KM"> كيلو متر</option>
+      <option value="M"> متر</option>
+      <option value="CM">سنتيمتر</option>
+      <option value="MM">مللى متر</option>
+      <option value="MI">ميل</option>
+      <option value="FT">قدم</option>
+  </select></td>
+      </tr>
+    <tr>
+        <td> </td>
+        <td><button type="submit" class="btn btn-warning" >TRANSLATE</button></td>
+    </tr>
+    </tbody>
+    </table>
+
+     <h4> <span class="label label-default">{{number}}</span></h4>
+     <h1> <span class="label label-default">{{r}}</span></h1>
+     <h1> <span class="label label-default">{{v4}}</span></h1>
+
+
+
+    </center>
+</form>
+{% endblock %}
+
+
+</body>
+</html>
